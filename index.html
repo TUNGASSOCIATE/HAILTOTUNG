@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffff00;
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 750px;
+            margin: 80px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .answer-box {
+            margin-bottom: 30px;
+        }
+        input[type="text"] {
+            background-color: #111;
+            color: #ffff00;
+            border: 1px solid #ffff00;
+            padding: 10px 15px;
+            font-size: 16px;
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+            outline: none;
+        }
+        input[type="text"]:focus {
+            box-shadow: 0 0 5px #ffff00;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="answer-box">
+        <input type="text" id="passcode" placeholder="Type answer here (no spaces)..." autocomplete="off" oninput="checkPasscode()" />
+    </div>
+
+    <p>1. surname associated with monad studios with every letter moved up by one letter: </p>
+    <p>2. my initials are D R and i am the only one who picked this answer: </p>
+    <p>3. lucycord member that “doesn’t interact with any negativity”: </p>
+    <p>4. known for yellow and simplicity, 4 numbers relating to it: </p>
+    <p>5. towmaytoe77 said this about 8 months ago: </p>
+    <p>6. bozos name used as code to talk about him with him knowing, spelt backwards: </p>
+    <p>7. the day the chair spun around 4 times in orlando: </p>
+    <br><br><br><br>
+    <p>Think you know the answer? Input your answer without spaces in the textbox above.</p>
+
+    <script>
+        const CORRECT_PHRASE = "ejtfsunoaicrouton4473goatedsalgoudmay19";
+        const DESTINATION_URL = "https://drive.google.com/drive/folders/1cIEW3FhksffbAwkJ2SRSwkcl0CEAgNkX?usp=sharing";
+
+        function checkPasscode() {
+            const inputVal = document.getElementById("passcode").value.trim().toLowerCase();
+            if (inputVal === CORRECT_PHRASE) {
+                window.location.href = DESTINATION_URL;
+            }
+        }
+    </script>
+
+</body>
+</html>
