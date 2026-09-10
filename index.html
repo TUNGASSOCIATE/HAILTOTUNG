@@ -50,13 +50,15 @@
     <p>Think you know the answer? Input your answer without spaces in the textbox above.</p>
 
     <script>
-        const CORRECT_PHRASE = "ejtfsunoaicrouton4473goatedsalguodmay19";
-        const DESTINATION_URL = "https://drive.google.com/drive/folders/1cIEW3FhksffbAwkJ2SRSwkcl0CEAgNkX?usp=sharing";
+        const DESTINATIONS = {
+            "ejtfsunoaicrouton4473goatedsalgoudmay19": "https://drive.google.com/drive/folders/1cIEW3FhksffbAwkJ2SRSwkcl0CEAgNkX?usp=sharing",
+            "31.07": "https://drive.google.com/drive/folders/1uCOcYyAVR3SIHw2pr_RViKsE1ToPHLpV?usp=sharing"
+        };
 
         function checkPasscode() {
             const inputVal = document.getElementById("passcode").value.trim().toLowerCase();
-            if (inputVal === CORRECT_PHRASE) {
-                window.location.href = DESTINATION_URL;
+            if (DESTINATIONS[inputVal]) {
+                window.location.href = DESTINATIONS[inputVal];
             }
         }
     </script>
